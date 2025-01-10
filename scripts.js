@@ -17,3 +17,12 @@ window.addEventListener('scroll', () => {
         backToTopButton.classList.remove('show');
     }
 });
+
+// Adiciona evento de clique ao botão de voltar ao topo
+backToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
