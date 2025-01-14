@@ -119,13 +119,34 @@ header nav ul li a i {
   background: #1b4332;
 }
 
+/* Estilos para as seções */
 .section {
-  padding: 60px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  padding: 50px 20px;
   text-align: center;
+}
+
+.section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section .text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.section .carousel-container {
+  flex: 1;
+  width: 100%;
+}
+
+.carousel-inner img {
+  max-width: 100%;
+  height: auto;
 }
 
 .section:nth-child(even) {
@@ -319,6 +340,27 @@ footer {
   }
 }
 
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .section .content {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .section .text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .section .text h2 {
+    font-size: 24px;
+  }
+
+  .section .text p {
+    font-size: 16px;
+  }
+}
+
 /* Estilos para os carrosséis de imagens nas sections de 1 a 7 */
 .carousel {
   position: relative;
@@ -387,3 +429,24 @@ footer {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+        /* Centralizar o carrossel */
+        .carousel-container {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Altura total da viewport */
+        }
+
+        /* Ajustar o tamanho do carrossel */
+        .custom-size {
+            width: 800px; /* Largura fixa */
+            height: 400px; /* Altura fixa */
+            object-fit: cover; /* Preenchimento sem distorção */
+        }
+
+        /* Ícones de navegação */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(100%);
+        }
