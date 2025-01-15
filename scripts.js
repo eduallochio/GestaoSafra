@@ -27,25 +27,4 @@ backToTopButton.addEventListener("click", (e) => {
   })
 })
 
-// Script para o carrossel
-document.querySelectorAll(".carousel").forEach((carousel) => {
-  let currentIndex = 0
-  const items = carousel.querySelectorAll(".carousel-item")
-  const totalItems = items.length
 
-  carousel
-    .querySelector(".carousel-control-next")
-    .addEventListener("click", () => {
-      items[currentIndex].classList.remove("active")
-      currentIndex = (currentIndex + 1) % totalItems
-      items[currentIndex].classList.add("active")
-    })
-
-  carousel
-    .querySelector(".carousel-control-prev")
-    .addEventListener("click", () => {
-      items[currentIndex].classList.remove("active")
-      currentIndex = (currentIndex - 1 + totalItems) % totalItems
-      items[currentIndex].classList.add("active")
-    })
-})

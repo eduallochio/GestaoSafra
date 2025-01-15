@@ -25,10 +25,6 @@ header .container {
   margin: 0 auto;
 }
 
-header .logo img {
-  height: 50px;
-}
-
 header nav ul {
   list-style: none;
   display: flex;
@@ -60,6 +56,7 @@ header nav ul li a i {
   text-align: center;
   padding: 50px 20px;
   background: url("/img/banner.jpg") no-repeat center center/cover;
+  background-attachment: fixed; /* Torna a imagem fixa ao scroll */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -77,6 +74,14 @@ header nav ul li a i {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .hero {
+    background-size: cover; /* Ocupa toda a área visível */
+    background-position: center; /* Centraliza a imagem */
+  }
 }
 
 .hero-content {
@@ -119,6 +124,19 @@ header nav ul li a i {
   background: #1b4332;
 }
 
+/* Estilos para o botão de chamada para ação */
+.cta-button {
+  display: none; /* Esconde o botão por padrão */
+  background: #40916c;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px 0;
+}
+
 /* Estilos para as seções */
 .section {
   padding: 50px 20px;
@@ -139,12 +157,12 @@ header nav ul li a i {
   margin-right: 20px;
 }
 
-.section .carousel-container {
+.section .image-container {
   flex: 1;
   width: 100%;
 }
 
-.carousel-inner img {
+.section .image-container img {
   max-width: 100%;
   height: auto;
 }
@@ -262,26 +280,6 @@ footer {
   color: #333;
 }
 
-/* Testemunhos */
-#testimonials {
-  background: #e8f5e9;
-  padding: 60px 20px;
-}
-
-#testimonials .testimonial {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#testimonials .testimonial p {
-  font-size: 18px;
-  margin: 0;
-}
-
 /* Botão de Voltar ao Topo */
 .back-to-top {
   position: fixed;
@@ -361,92 +359,9 @@ footer {
   }
 }
 
-/* Estilos para os carrosséis de imagens nas sections de 1 a 7 */
-.carousel {
-  position: relative;
-  max-width: 800px;
-  margin: 20px auto;
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .cta-button.mobile-only {
+    display: inline-block; /* Mostra o botão apenas em dispositivos móveis */
+  }
 }
-
-.carousel-inner {
-  display: flex;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-item {
-  flex: 0 0 100%;
-  transition: transform 0.5s ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.carousel-item.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 9;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  user-select: none;
-}
-
-.carousel-control-prev {
-  left: 10px;
-}
-
-.carousel-control-next {
-  right: 10px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  font-size: 24px;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-        /* Centralizar o carrossel */
-        .carousel-container {
-            display: flex;
-            justify-content: center; /* Centraliza horizontalmente */
-            align-items: center; /* Centraliza verticalmente */
-            height: 100vh; /* Altura total da viewport */
-        }
-
-        /* Ajustar o tamanho do carrossel */
-        .custom-size {
-            width: 800px; /* Largura fixa */
-            height: 400px; /* Altura fixa */
-            object-fit: cover; /* Preenchimento sem distorção */
-        }
-
-        /* Ícones de navegação */
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            filter: invert(100%);
-        }
