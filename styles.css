@@ -365,3 +365,31 @@ footer {
     display: inline-block; /* Mostra o botão apenas em dispositivos móveis */
   }
 }
+
+/* Media Queries para dispositivos móveis até 430x932 */
+@media (max-width: 430px) {
+  .navigation {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 10px;
+  }
+
+  .navigation a {
+    margin: 0 8px;
+    font-size: 16px;
+  }
+
+  .hero img {
+    max-height: 200px;
+  }
+
+  .carousel-item img {
+    max-height: 150px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
