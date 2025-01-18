@@ -73,7 +73,7 @@ header nav ul li a i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
 }
 
 .capa-content {
@@ -131,7 +131,7 @@ header nav ul li a i {
 
 /* Estilos para as seções */
 .section {
-  padding: 50px 20px;
+  padding: 60px 20px; /* Aumenta o espaçamento em telas maiores */
   text-align: center;
 }
 
@@ -139,66 +139,44 @@ header nav ul li a i {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-wrap: nowrap; /* Evita quebras de linha em telas grandes */
   align-items: center;
   justify-content: space-between;
+  gap: 30px; /* Adiciona espaço entre os elementos */
 }
 
 .section .text {
   flex: 1;
-  margin-right: 20px;
+  padding: 20px;
+  text-align: left;
 }
 
 .section .image-container {
   flex: 1;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .section .image-container img {
-  max-width: 100%;
-  height: auto;
-}
-
-.section:nth-child(even) {
-  background: #f0f0f0;
-}
-
-.section .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.section .content .text {
-  flex: 1;
-  padding: 20px;
-}
-
-.section .content .image {
-  flex: 1;
-  padding: 20px;
-}
-
-.section .content .image img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona um visual mais elegante */
 }
 
+/* Estilo dos títulos e parágrafos */
 .section h2 {
-  font-size: 36px;
+  font-size: 40px; /* Tamanho maior para títulos em telas grandes */
   margin-bottom: 20px;
+  font-weight: 700; /* Dá mais ênfase ao título */
 }
 
 .section p {
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto 20px;
+  font-size: 20px; /* Aumenta o tamanho do texto */
+  line-height: 1.8; /* Melhora a legibilidade */
+  max-width: 600px; /* Limita a largura do texto */
+  margin: 0 auto; /* Centraliza o texto */
+  text-align: justify;
 }
 
 .cta {
@@ -294,24 +272,28 @@ footer {
   background: #1b4332;
 }
 
-/* Navegação fixa no canto superior direito */
+/* Navegação fixa centralizada */
 .navigation {
   position: fixed;
   top: 15px;
-  left: 23%;
+  left: 50%;
+  transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.8);
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex; /* Mantém os itens em linha */
+  justify-content: center; /* Centraliza horizontalmente */
 }
 
 .navigation a {
   color: #fff;
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 12px; /* Espaçamento horizontal */
   font-size: 18px;
   font-weight: 500;
   transition: color 0.3s;
+  white-space: nowrap; /* Evita que os textos quebrem em várias linhas */
 }
 
 .navigation a:hover {
@@ -320,76 +302,116 @@ footer {
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
+  .navigation {
+    padding: 15px;
+    flex-wrap: wrap; /* Garante que os links se reorganizem ao invés de empilhar */
+    width: 100%;
+  }
+
+  .navigation a {
+    margin: 0 8px; /* Espaçamento menor entre links */
+    font-size: 16px;
+  }
+}
+
+/* Ajustes para dispositivos muito pequenos (ex.: 430px) */
+@media (max-width: 430px) {
+  .navigation {
+    padding: 8px;
+    justify-content: space-around; /* Garante espaçamento uniforme entre links */
+  }
+
+  .navigation a {
+    margin: 5px; /* Ajusta margens para telas menores */
+    font-size: 14px;
+  }
+}
+/* Ajustes para dispositivos menores */
+@media (max-width: 1024px) {
   .capa {
-    background-size: cover; /* Ocupa toda a área visível */
-    background-position: center; /* Centraliza a imagem */
+    background-attachment: scroll; /* Desativa o efeito parallax */
+  }
+}
+
+@media (max-width: 768px) {
+  .capa {
+    height: auto; /* Ajusta altura para conteúdo variável */
+    padding: 30px 15px; /* Reduz padding em dispositivos menores */
+    background-size: contain; /* Garante que toda a imagem seja exibida */
+    background-position: center center; /* Centraliza corretamente a imagem */
+  }
+}
+
+@media (max-width: 480px) {
+  .capa {
+    background-size: contain; /* Mantém a imagem proporcional */
+    height: auto; /* Permite adaptação ao conteúdo */
+    padding: 20px 10px; /* Padding ainda menor para telas muito pequenas */
+  }
+}
+
+/* Ajustes para telas médias */
+@media (max-width: 1024px) {
+  .section .content {
+    flex-wrap: wrap; /* Permite quebras de linha */
+  }
+
+  .section h2 {
+    font-size: 32px; /* Reduz o tamanho do título */
+  }
+
+  .section p {
+    font-size: 18px; /* Reduz o tamanho do texto */
+  }
+
+  .section .image-container img {
+    max-width: 80%; /* Reduz a largura da imagem */
   }
 }
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    text-align: center;
+  .section {
+    padding: 40px 15px;
   }
-  .content img {
-    max-width: 70%;
-    margin-bottom: 20px;
-  }
-}
 
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+
   .section .content {
-    flex-direction: column;
-    padding: 0 10px;
+    flex-direction: column; /* Coloca texto e imagem em colunas */
+    text-align: center;
   }
 
   .section .text {
-    margin-right: 0;
-    margin-bottom: 20px;
+    padding: 10px 0;
   }
 
-  .section .text h2 {
+  .section .image-container img {
+    max-width: 90%; /* Ajusta a imagem para caber em dispositivos menores */
+  }
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 480px) {
+  .section {
+    padding: 30px 10px;
+  }
+
+  .section h2 {
     font-size: 24px;
   }
 
-  .section .text p {
-    font-size: 16px;
-  }
-}
-
-/* Media Queries para dispositivos móveis */
-@media (max-width: 768px) {
-  .cta-button.mobile-only {
-    display: inline-block; /* Mostra o botão apenas em dispositivos móveis */
-  }
-}
-
-/* Media Queries para dispositivos móveis até 430x932 */
-@media (max-width: 430px) {
-  .navigation {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    padding: 10px;
+  .section p {
+    font-size: 14px;
   }
 
-  .navigation a {
-    margin: 0 8px;
-    font-size: 16px;
-  }
-
-  .hero img {
-    max-height: 200px;
-  }
-
-  .carousel-item img {
-    max-height: 150px;
-  }
-
-  .cta-button {
-    font-size: 16px;
-    padding: 8px 16px;
+  .section .image-container img {
+    max-width: 100%; /* Usa toda a largura disponível */
   }
 }
