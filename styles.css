@@ -51,8 +51,8 @@ header nav ul li a i {
   margin-right: 8px;
 }
 
-/* Estilos para a seção hero */
-.hero {
+/* Estilos para a seção capa */
+.capa {
   text-align: center;
   padding: 50px 20px;
   background: url("/img/banner.jpg") no-repeat center center/cover;
@@ -66,7 +66,7 @@ header nav ul li a i {
   position: relative;
 }
 
-.hero::before {
+.capa::before {
   content: "";
   position: absolute;
   top: 0;
@@ -76,35 +76,27 @@ header nav ul li a i {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
-  .hero {
-    background-size: cover; /* Ocupa toda a área visível */
-    background-position: center; /* Centraliza a imagem */
-  }
-}
-
-.hero-content {
+.capa-content {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-.hero img {
+.capa img {
   max-width: 100%;
   height: auto;
   margin: 20px 0;
 }
 
-.hero h1 {
+.capa h1 {
   font-size: 60px;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.hero p {
+.capa p {
   font-size: 24px;
   margin-bottom: 30px;
   margin-top: 6cm; /* Adiciona margem superior de 6 centímetros */
@@ -305,8 +297,8 @@ footer {
 /* Navegação fixa no canto superior direito */
 .navigation {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  left: 23%;
   background: rgba(0, 0, 0, 0.8);
   padding: 15px;
   border-radius: 10px;
@@ -324,6 +316,14 @@ footer {
 
 .navigation a:hover {
   color: #40916c;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .capa {
+    background-size: cover; /* Ocupa toda a área visível */
+    background-position: center; /* Centraliza a imagem */
+  }
 }
 
 /* Ajustes para dispositivos móveis */
