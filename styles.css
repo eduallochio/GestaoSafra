@@ -101,6 +101,11 @@ header nav ul li a i {
   margin-bottom: 30px;
   margin-top: 6cm; /* Adiciona margem superior de 6 centímetros */
 }
+img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+}
 
 .cta-button {
   background: #40916c;
@@ -135,6 +140,22 @@ header nav ul li a i {
   text-align: center;
 }
 
+
+/* Estilo dos títulos e parágrafos */
+.section h2 {
+  font-size: 40px; /* Tamanho maior para títulos em telas grandes */
+  margin-bottom: 20px;
+  font-weight: 700; /* Dá mais ênfase ao título */
+}
+
+.section p {
+  font-size: 20px; /* Aumenta o tamanho do texto */
+  line-height: 1.8; /* Melhora a legibilidade */
+  max-width: 600px; /* Limita a largura do texto */
+  margin: 0 auto; /* Centraliza o texto */
+  text-align: justify;
+}
+
 .section .content {
   max-width: 1200px;
   margin: 0 auto;
@@ -162,22 +183,9 @@ header nav ul li a i {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona um visual mais elegante */
+  display: block;
 }
 
-/* Estilo dos títulos e parágrafos */
-.section h2 {
-  font-size: 40px; /* Tamanho maior para títulos em telas grandes */
-  margin-bottom: 20px;
-  font-weight: 700; /* Dá mais ênfase ao título */
-}
-
-.section p {
-  font-size: 20px; /* Aumenta o tamanho do texto */
-  line-height: 1.8; /* Melhora a legibilidade */
-  max-width: 600px; /* Limita a largura do texto */
-  margin: 0 auto; /* Centraliza o texto */
-  text-align: justify;
-}
 
 .cta {
   text-align: center;
@@ -209,7 +217,6 @@ footer {
 }
 
 .footer-container {
-  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -299,9 +306,35 @@ footer {
 .navigation a:hover {
   color: #40916c;
 }
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+        text-align: center;
+        margin: 10px ;
+    }
+}
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
+    .capa {
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+
   .navigation {
     padding: 15px;
     flex-wrap: wrap; /* Garante que os links se reorganizem ao invés de empilhar */
@@ -314,8 +347,20 @@ footer {
   }
 }
 
+
 /* Ajustes para dispositivos muito pequenos (ex.: 430px) */
 @media (max-width: 430px) {
+    .capa {
+    padding: 20px 10px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
   .navigation {
     padding: 8px;
     justify-content: space-around; /* Garante espaçamento uniforme entre links */
@@ -326,32 +371,11 @@ footer {
     font-size: 14px;
   }
 }
-/* Ajustes para dispositivos menores */
-@media (max-width: 1024px) {
-  .capa {
-    background-attachment: scroll; /* Desativa o efeito parallax */
-  }
-}
-
-@media (max-width: 768px) {
-  .capa {
-    height: auto; /* Ajusta altura para conteúdo variável */
-    padding: 30px 15px; /* Reduz padding em dispositivos menores */
-    background-size: contain; /* Garante que toda a imagem seja exibida */
-    background-position: center center; /* Centraliza corretamente a imagem */
-  }
-}
-
-@media (max-width: 480px) {
-  .capa {
-    background-size: contain; /* Mantém a imagem proporcional */
-    height: auto; /* Permite adaptação ao conteúdo */
-    padding: 20px 10px; /* Padding ainda menor para telas muito pequenas */
-  }
-}
-
 /* Ajustes para telas médias */
 @media (max-width: 1024px) {
+   .capa {
+    background-attachment: scroll; /* Desativa o efeito parallax */
+  }
   .section .content {
     flex-wrap: wrap; /* Permite quebras de linha */
   }
@@ -371,6 +395,12 @@ footer {
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
+    .capa {
+    height: auto; /* Ajusta altura para conteúdo variável */
+    padding: 30px 15px; /* Reduz padding em dispositivos menores */
+    background-size: contain; /* Garante que toda a imagem seja exibida */
+    background-position: center center; /* Centraliza corretamente a imagem */
+  }
   .section {
     padding: 40px 15px;
   }
@@ -399,6 +429,11 @@ footer {
 
 /* Ajustes para telas pequenas */
 @media (max-width: 480px) {
+    .capa {
+    background-size: contain; /* Mantém a imagem proporcional */
+    height: auto; /* Permite adaptação ao conteúdo */
+    padding: 20px 10px; /* Padding ainda menor para telas muito pequenas */
+  }
   .section {
     padding: 30px 10px;
   }
