@@ -99,7 +99,7 @@ header nav ul li a i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0);
   z-index: 0;
 }
 
@@ -636,6 +636,8 @@ footer {
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .capa {
+    background: url("/img/banner-mobile.jpeg") no-repeat center center/cover;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
     height: auto;
@@ -738,6 +740,8 @@ footer {
 /* Ajustes para dispositivos muito pequenos (ex.: 430px) */
 @media (max-width: 430px) {
   .capa {
+    background: url("/img/banner-mobile.jpeg") no-repeat center center/cover;
+    background-attachment: scroll;
     padding: 80px 10px 50px;
     min-height: 90vh;
   }
@@ -818,7 +822,8 @@ footer {
 /* Ajustes para telas médias */
 @media (max-width: 1024px) {
    .capa {
-    background-attachment: scroll; /* Desativa o efeito parallax */
+    background: url("/img/banner-mobile.jpeg") no-repeat center center/cover;
+    background-attachment: scroll;
   }
   .section .content {
     flex-wrap: wrap; /* Permite quebras de linha */
