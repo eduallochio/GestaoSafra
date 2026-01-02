@@ -4,10 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestão Safra - Sistema de gestão agrícola completo para monitorar e gerenciar suas operações com eficiência">
+    <meta name="theme-color" content="#2d6a4f">
+    
     <title>Gestão Safra - Funções</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Preconnect para melhorar performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload recursos críticos -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
+    
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="icon" href="/svg/favicon.ico" type="image/x-icon">
 
 </head>
@@ -28,7 +42,9 @@
     <!-- Seção capa -->
     <section class="capa">
         <div class="capa-content">
-            <p>Monitore e gerencie suas operações agrícolas com eficiência</p>
+            <!-- <h1>Gestão Safra</h1> -->
+            <p class="capa-tagline">Monitore e gerencie suas operações agrícolas com eficiência</p>
+            <a href="#section1" class="cta-button-hero">Conheça as Funcionalidades</a>
         </div>
     </section>
 
@@ -37,27 +53,27 @@
     <section id="section1" class="section">
         <div class="content">
             <div class="text">
-                <h2>Dashboard</h2>
-                <p>Um deshboard que você controla compras, vendas, tarefas, financeiros e muito mais tudo em um só
+                <h2><i class="fas fa-chart-line"></i> Dashboard</h2>
+                <p>Um dashboard que você controla compras, vendas, tarefas, financeiros e muito mais tudo em um só
                     lugar.
-                    Para maximizar sua produtividadede qualquer lugar e a qualquer hora.</p>
+                    Para maximizar sua produtividade de qualquer lugar e a qualquer hora.</p>
             </div>
             <div class="image-container">
-                <img src="/gif/Dashboard.gif" alt="Imagem ilustrativa de monitoramento da safra 1">
+                <img src="/gif/Dashboard.gif" alt="Imagem ilustrativa de monitoramento da safra 1" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
 
     <!-- Seção 2 -->
-    <section id="section2" class="section">
-        <div class="content">
+    <section id="section2" class="section section-alternate">
+        <div class="content content-reverse">
             <div class="text">
-                <h2>Estoques</h2>
+                <h2><i class="fas fa-boxes"></i> Estoques</h2>
                 <p>Gerencie seus estoques de forma eficiente, acompanhando entradas e saídas de produtos em tempo real.
                 </p>
             </div>
             <div class="image-container">
-                <img src="/gif/estoque.gif" alt="Imagem ilustrativa de gestão de estoques 1">
+                <img src="/gif/estoque.gif" alt="Imagem ilustrativa de gestão de estoques 1" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -66,24 +82,24 @@
     <section id="section3" class="section">
         <div class="content">
             <div class="text">
-                <h2>Tarefas</h2>
+                <h2><i class="fas fa-tasks"></i> Tarefas</h2>
                 <p>Organize e acompanhe suas tarefas diárias para garantir que tudo seja feito no prazo.</p>
             </div>
             <div class="image-container">
-                <img src="/gif/tarefas.gif" alt="Imagem ilustrativa de tarefas 1">
+                <img src="/gif/tarefas.gif" alt="Imagem ilustrativa de tarefas 1" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
 
     <!-- Seção 4 -->
-    <section id="section4" class="section">
-        <div class="content">
+    <section id="section4" class="section section-alternate">
+        <div class="content content-reverse">
             <div class="text">
-                <h2>Armazenagens</h2>
+                <h2><i class="fas fa-warehouse"></i> Armazenagens</h2>
                 <p>Controle suas armazenagens de forma eficiente, garantindo a qualidade e segurança dos produtos.</p>
             </div>
             <div class="image-container">
-                <img src="/gif/armazenagem.gif" alt="Imagem ilustrativa de armazenagens 1">
+                <img src="/gif/armazenagem.gif" alt="Imagem ilustrativa de armazenagens 1" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -92,24 +108,24 @@
     <section id="section5" class="section">
         <div class="content">
             <div class="text">
-                <h2>Contas a Pagar</h2>
+                <h2><i class="fas fa-file-invoice-dollar"></i> Contas a Pagar</h2>
                 <p>Gerencie suas contas a pagar de forma eficiente, evitando atrasos e multas.</p>
             </div>
             <div class="image-container">
-                <img src="/gif/Contas.gif" alt="Imagem ilustrativa de contas a pagar 1">
+                <img src="/gif/Contas.gif" alt="Imagem ilustrativa de contas a pagar 1" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
 
     <!-- Seção 6 -->
-    <section id="section6" class="section">
-        <div class="content">
+    <section id="section6" class="section section-alternate">
+        <div class="content content-reverse">
             <div class="text">
-                <h2>Compra</h2>
+                <h2><i class="fas fa-shopping-cart"></i> Compra</h2>
                 <p>Facilite suas compras com um sistema integrado que permite acompanhar pedidos e fornecedores.</p>
             </div>
             <div class="image-container">
-                <img src="/gif/Compras.gif" alt="Imagem ilustrativa de compras 1">
+                <img src="/gif/Compras.gif" alt="Imagem ilustrativa de compras 1" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -118,11 +134,11 @@
     <section id="section7" class="section">
         <div class="content">
             <div class="text">
-                <h2>Solicitações de Vendas</h2>
+                <h2><i class="fas fa-handshake"></i> Solicitações de Vendas</h2>
                 <p>Gerencie suas solicitações de vendas de forma eficiente, acompanhando todo o processo de venda.</p>
             </div>
             <div class="image-container">
-                <img src="/gif/vendas.gif" alt="Imagem ilustrativa de vendas 1">
+                <img src="/gif/vendas.gif" alt="Imagem ilustrativa de vendas 1" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -138,26 +154,22 @@
         <div class="footer-container" style="text-align: center;">
             <div class="footer-logo">
             </div>
-            <div class="footer-links">
-                <nav>
-                    <ul style="display: inline-block; list-style: none; padding: 0;">
-                        <li style="display: inline; margin: 0 10px;"><a href="#">Contato</a></li>
-                        <li style="display: inline; margin: 0 10px;"><a href="#">Política de Privacidade</a></li>
-                        <li style="display: inline; margin: 0 10px;"><a href="#">Termos de Uso</a></li>
-                    </ul>
-                </nav>
-            </div>
         </div>
         <div class="footer-bottom" style="text-align: center;">
-            <p>&copy; 2025 Gestão Safra. Todos os direitos reservados.</p>
-            <p>Desenvolvido por <a href="https://biagre.com.br" target="_blank">Biagre</a></p>
+            <p>&copy; <span id="current-year"></span> Gestão Safra. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://omegasistem.com.br" target="_blank">OmegaSistem</a> em parceria com <a href="https://biagre.com.br" target="_blank">Biagre</a></p>
         </div>
     </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/552732113401" class="whatsapp-float" target="_blank" rel="noopener" title="WhatsApp (27) 3211-3401">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Botão de Voltar ao Topo -->
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 
 </body>
 
