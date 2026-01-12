@@ -22,33 +22,25 @@ if (currentYearElement) {
 
 // Botão de download do app - detecta sistema operacional
 const downloadButton = document.getElementById('download-app')
-console.log('Download button encontrado:', downloadButton) // Debug
 if (downloadButton) {
   downloadButton.addEventListener('click', function(e) {
     e.preventDefault()
-    console.log('Botão clicado') // Debug
     
     const userAgent = navigator.userAgent || navigator.vendor || window.opera
-    console.log('UserAgent:', userAgent) // Debug
     
     // Detecta iOS
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      console.log('Redirecionando para App Store') // Debug
       window.location.href = 'https://apps.apple.com/sa/app/gest%C3%A3o-safra/id6480516817'
     }
     // Detecta Android
     else if (/android/i.test(userAgent)) {
-      console.log('Redirecionando para Play Store') // Debug
       window.location.href = 'https://play.google.com/store/apps/details?id=br.com.gestaosafra'
     }
     // Fallback para outros dispositivos
     else {
-      console.log('Redirecionando para página de download') // Debug
       window.location.href = 'https://gestaosafra.com.br/baixar'
     }
   })
-} else {
-  console.error('Botão download-app não encontrado no DOM')
 }
 
 // Script para o botão de voltar ao topo
